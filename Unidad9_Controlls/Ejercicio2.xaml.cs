@@ -26,5 +26,10 @@ namespace Unidad9_Controlls
         {
             this.InitializeComponent();
         }
+
+        private void navigate_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+
+        }
     }
 }

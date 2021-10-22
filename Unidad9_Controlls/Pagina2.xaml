@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel>
+        <MediaPlayerElement  Source="ms-appx:///Assets/No te olvides de poner el Where en el Delete From.mp4" AutoPlay="False"/>
         <Button Content="BACK" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Click="Button_Click"/>
     </RelativePanel>
 </Page>

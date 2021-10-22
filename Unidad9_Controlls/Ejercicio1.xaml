@@ -66,7 +66,7 @@
                             <TextBlock>Opcion 1</TextBlock>
                         </CheckBox>
                         <CheckBox>
-                            <TextBlock>Opcion 1</TextBlock>
+                            <TextBlock>Opcion 2</TextBlock>
                         </CheckBox>
                     </StackPanel>
                 </PivotItem>
