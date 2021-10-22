@@ -61,22 +61,15 @@
                             <SymbolIcon Symbol="Mail" Margin="10,0,0,0"/>
                         </StackPanel>
                     </PivotItem.Header>
+                    <StackPanel>
+                        <CheckBox>
+                            <TextBlock>Opcion 1</TextBlock>
+                        </CheckBox>
+                        <CheckBox>
+                            <TextBlock>Opcion 1</TextBlock>
+                        </CheckBox>
+                    </StackPanel>
                 </PivotItem>
-                <PivotItem>
-                    <PivotItem.Header>
-                        <StackPanel>
-                            <CheckBox>
-                                <TextBlock>Opcion 1</TextBlock>
-                            </CheckBox>
-                            <CheckBox>
-                                <TextBlock>Opcion 1</TextBlock>
-                            </CheckBox>
-                        </StackPanel>
-                    </PivotItem.Header>
-                    </PivotItem>
-                </PivotItem>
-                
-                
             </Pivot>
         </RelativePanel>
         
