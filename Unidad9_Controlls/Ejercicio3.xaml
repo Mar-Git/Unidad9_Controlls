@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="Unidad9_Controlls.Ejercicio3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Unidad9_Controlls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel x:Name="ImageGrid">
+        <StackPanel Name="menuBotones" Orientation="Vertical" RelativePanel.AlignLeftWithPanel="True" 
+                    RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" 
+                      Background="AliceBlue">
+            <AppBarButton Name="añadir" Icon="Add" Label="añadir"/>
+            <AppBarButton Name="ir" Icon="Go" Label="ir"/>
+            <AppBarButton Name="objetivo" Icon="Globe"/>
+            <AppBarButton Name="añadirPersona" Icon="AddFriend" Label="añadir" />
+        </StackPanel>
+        <Grid x:Name="imagenes" RelativePanel.RightOf="menuBotones" RelativePanel.AlignHorizontalCenterWithPanel="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Image Source="lago-wanakanueva-zelanda_3bca218b_800x800.jpg" Grid.Row="0" Grid.Column="0"/>
+            <Image Source="hemis-0255544__800x800.jpg"  Grid.Row="0" Grid.Column="1"/>
+            <Image Source="75-756527_10-latest-scenery-wallpaper-hd-1080p-full-hd.jpg" Grid.Row="0" Grid.Column="2"/>
+        </Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="VisualStateDesktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="550" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="menuBotones.Orientation" Value="Vertical" />
+                        
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="VisualStateMobile">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="menuBotones.Orientation" Value="Horizontal"/>
+                        
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </RelativePanel>
+</Page>

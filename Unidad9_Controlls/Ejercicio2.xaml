@@ -11,10 +11,10 @@
     <RelativePanel>
         <NavigationView x:Name="navigate" ItemInvoked="navigate_ItemInvoked">
             <NavigationView.MenuItems>
-                <NavigationViewItem Icon="Play" Content="Video" Tag="SamplePage1" />
-                <NavigationViewItem Icon="Calendar" Content="Calendario" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Play" Content="Video" Tag="Pagina2" Name="video"  />
+                <NavigationViewItem Icon="Calendar" Content="Calendario" Tag="Pagina3" Name="calendar"/>
             </NavigationView.MenuItems>
-            <Frame x:Name="contentFrame"/>
+            <Frame x:Name="ContentFrame"/>
         </NavigationView>
         
         

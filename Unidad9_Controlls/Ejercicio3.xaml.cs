@@ -20,24 +20,11 @@ namespace Unidad9_Controlls
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class Ejercicio2 : Page
+    public sealed partial class Ejercicio3 : Page
     {
-        public Ejercicio2()
+        public Ejercicio3()
         {
             this.InitializeComponent();
-        }
-
-        private void navigate_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
-        {
-            var item = args.InvokedItemContainer as NavigationViewItem;
-            if (item.Name == "video")
-            {
-                ContentFrame.Navigate(typeof(Pagina2), null);
-            }
-            if(item.Name== "calendar")
-            {
-                ContentFrame.Navigate(typeof(Pagina3), null);
-            }
         }
     }
 }

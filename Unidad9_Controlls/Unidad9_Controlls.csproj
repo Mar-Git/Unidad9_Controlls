@@ -125,8 +125,14 @@
     <Compile Include="Ejercicio2.xaml.cs">
       <DependentUpon>Ejercicio2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicio3.xaml.cs">
+      <DependentUpon>Ejercicio3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pagina2.xaml.cs">
       <DependentUpon>Pagina2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina3.xaml.cs">
+      <DependentUpon>Pagina3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -136,6 +142,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\75-756527_10-latest-scenery-wallpaper-hd-1080p-full-hd.jpg" />
+    <Content Include="Assets\hemis-0255544__800x800.jpg" />
+    <Content Include="Assets\lago-wanakanueva-zelanda_3bca218b_800x800.jpg" />
     <Content Include="Assets\No te olvides de poner el Where en el Delete From.mp4" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -159,7 +168,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Ejercicio3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pagina2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagina3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
