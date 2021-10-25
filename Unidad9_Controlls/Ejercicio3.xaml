@@ -17,22 +17,17 @@
             <AppBarButton Name="objetivo" Icon="Globe"/>
             <AppBarButton Name="añadirPersona" Icon="AddFriend" Label="añadir" />
         </StackPanel>
-        <Grid x:Name="imagenes" RelativePanel.RightOf="menuBotones" RelativePanel.AlignHorizontalCenterWithPanel="True">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Image Source="lago-wanakanueva-zelanda_3bca218b_800x800.jpg" Grid.Row="0" Grid.Column="0"/>
-            <Image Source="hemis-0255544__800x800.jpg"  Grid.Row="0" Grid.Column="1"/>
-            <Image Source="75-756527_10-latest-scenery-wallpaper-hd-1080p-full-hd.jpg" Grid.Row="0" Grid.Column="2"/>
-        </Grid>
+        <StackPanel x:Name="imagenesPrimeraFila" Orientation="Horizontal" RelativePanel.AlignTopWithPanel="True" RelativePanel.RightOf="menuBotones">
+            <Image Source="/Assets/lago-wanakanueva-zelanda_3bca218b_800x800.jpg" MaxWidth="450" MaxHeight="450"/>
+            <Image Source="/Assets/hemis-0255544__800x800.jpg" MaxWidth="450" MaxHeight="450" />
+            <Image Source="/Assets/75-756527_10-latest-scenery-wallpaper-hd-1080p-full-hd.jpg" MaxWidth="450" MaxHeight="450" />
+            
+        </StackPanel>
+        <StackPanel x:Name="imagenesSegundaFila" Orientation="Horizontal" RelativePanel.Below="imagenesPrimeraFila" RelativePanel.RightOf="menuBotones">
+            <Image Source="/Assets/75-756527_10-latest-scenery-wallpaper-hd-1080p-full-hd.jpg" MaxWidth="450" MaxHeight="450"/>
+            <Image Source="/Assets/lago-wanakanueva-zelanda_3bca218b_800x800.jpg" MaxWidth="450" MaxHeight="450"/>
+            <Image Source="/Assets/hemis-0255544__800x800.jpg" MaxWidth="450" MaxHeight="450" />
+        </StackPanel>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
                 <VisualState x:Name="VisualStateDesktop">
@@ -41,7 +36,6 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="menuBotones.Orientation" Value="Vertical" />
-                        
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="VisualStateMobile">
@@ -50,10 +44,12 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="menuBotones.Orientation" Value="Horizontal"/>
-                        
+                        <Setter Target="imagenesPrimeraFila.Orientation" Value="Vertical"/>
+                        <Setter Target="imagenesSegundaFila.Orientation" Value="Vertical"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
     </RelativePanel>
 </Page>
+<!--habria sido mejor hacer las imagenes en un Grid, asi se amolda mejor a la pantalla. Para hacerlo asi hay que definir 9 filas y 3 columnas, para luego reubicar las imagenes -->
